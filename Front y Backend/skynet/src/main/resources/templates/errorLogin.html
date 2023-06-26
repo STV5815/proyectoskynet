@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error de inicio de sesión</title>
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Error de inicio de sesión</h1>
+        <div class="alert alert-danger" role="alert">
+            <p>Ha ocurrido un error al iniciar sesión.</p>
+            <p>Por favor, verifica tus credenciales e intenta nuevamente.</p>
+        </div>
+        <a class="btn btn-primary" href="/">Volver al inicio de sesión</a>
+    </div>
+
+    <script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

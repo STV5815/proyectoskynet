@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.rtl.min.css">
+<link rel="stylesheet" th:href="@{./css/styles.css}" />
+<title>Usuarios</title>
+</head>
+<a class="btn btn-info mb-2" th:href="@{/crearUsuario}">Crear
+	Usuario</a>
+<a style="text-align: right" class="btn btn-warning mb-2"
+	th:href="@{/admin}">Regresar</a>
+<body>
+	<div>
+		<h1 style="text-align: center">Configuracion de Usuarios</h1>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Usuario</th>
+					<th scope="col">Email</th>
+					<th scope="col">Id Rol</th>
+					<th scope="col">Acciones</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="usuario:${listaUsuarios}">
+					<th th:text="${usuario.nombre}" scope="row"></th>
+					<td th:text="${usuario.email}"></td>
+					<td th:text="${usuario.rol.nombre}"></td>
+					<td><a th:href="@{/actualizarUsuario/{id}(id=${usuario.id})}"
+						class="btn btn-primary">Actualizar</a> <a
+						th:href="@{/borrarUsuario/{id}(id=${usuario.id})}"
+						class="btn btn-danger">Eliminar</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<a class="btn btn-success mb-2 center" href="/report-usuarios">Generar Informe PDF de Usuarios</a>
+	</div>
+</body>
+</html>

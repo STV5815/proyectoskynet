@@ -1,0 +1,37 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador</title>
+
+
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}">
+    	<link rel="stylesheet" th:href="@{./css/styles.css}" />
+</head>
+<body>
+    <div class="container">
+        <div class="out"> 
+        <a style="text-align:right" class="btn btn-danger mb-2" th:href="@{/}">Cerrar Sesión</a>
+        </div> 
+        
+        <h2>PAGINA ADMINISTRADORES</h2>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+
+        <div class="d-flex flex-column align-items-center">
+            <a class="btn btn-primary btn-lg mb-2" th:href="@{/usuarios}">Gestionar Usuarios</a>
+            <br/>
+            <a class="btn btn-primary btn-lg mb-2" th:href="@{/roles}">Gestionar Roles</a>
+            <br/>
+       	    <br/>
+        
+           
+        </div>
+    </div>
+
+    <script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

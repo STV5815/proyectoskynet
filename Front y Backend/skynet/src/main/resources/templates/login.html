@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{./css/styles.css}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+
+        <div th:if="${error}" class="alert alert-danger" role="alert">
+            <p th:text="${error}"></p>
+        </div>
+
+        <form action="#" th:action="@{/login}" method="post">
+            <div class="form-group">
+                <label for="nombre">Usuario:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-md">Iniciar sesión</button>
+        </form>
+    </div>
+
+   
+    <script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

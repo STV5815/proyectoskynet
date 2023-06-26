@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tecnicos</title>
+
+
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}">
+    	<link rel="stylesheet" th:href="@{./css/styles.css}" />
+</head>
+<body>
+    <div class="container">
+    <div class="out"> 
+        <a style="text-align:right" class="btn btn-danger mb-2" th:href="@{/}">Cerrar Sesión</a>
+        </div> 
+        <h2>PAGINA TECNICOS</h2>
+
+        <div class="d-flex flex-column align-items-center">
+        <br>
+        <br>
+        <br>
+            <a class="btn btn-primary btn-lg mb-2" th:href="@{/visitastecnico}">Visitas Asignadas</a>
+        </div>
+    </div>
+
+    <script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
